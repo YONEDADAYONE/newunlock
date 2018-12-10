@@ -28,7 +28,20 @@ class resultViewController: UIViewController {
         resultLabel2.text = myString10
         resultLabel3.text = myString11
         resultLabel4.text = myString12
-        
+    }
+    
+    @IBAction func enter5(_ sender: Any)
+    {
+        performSegue(withIdentifier: "seguemon", sender: self)
+    }
+    
+    override func prepare(for seguemon: UIStoryboardSegue, sender: Any?)
+    {
+        let ListViewController = seguemon.destination as! ListViewController
+        ListViewController.myString13 = myString9
+        ListViewController.myString14 = myString10
+        ListViewController.myString15 = myString11
+        ListViewController.myString16 = myString12
     }
 
     override func didReceiveMemoryWarning() {

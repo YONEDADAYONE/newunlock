@@ -21,7 +21,6 @@ class fourthViewController: UIViewController {
     
     override func prepare(for segueiko: UIStoryboardSegue, sender: Any?)
     {
-        
         var FifthViewController = segueiko.destination as! FifthViewController
         FifthViewController.myString6 = myString4
         FifthViewController.myString7 = myString5
