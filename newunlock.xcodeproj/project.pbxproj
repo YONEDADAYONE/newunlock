@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89D35D8228D91F346B525D5D /* Pods_newunlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687D22D0825612822B3FF309 /* Pods_newunlock.framework */; };
 		EE2932C821A8105700BFFA12 /* fourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2932C721A8105700BFFA12 /* fourthViewController.swift */; };
 		EE2932CA21A819AA00BFFA12 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2932C921A819AA00BFFA12 /* FifthViewController.swift */; };
 		EE2932CC21A8211900BFFA12 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2932CB21A8211900BFFA12 /* resultViewController.swift */; };
-		EE2932CF21A82A5800BFFA12 /* newunlockModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE2932CD21A82A5800BFFA12 /* newunlockModel.xcdatamodeld */; };
 		EE336A2821A4111E00701254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE336A2721A4111E00701254 /* AppDelegate.swift */; };
 		EE336A2A21A4111E00701254 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE336A2921A4111E00701254 /* ViewController.swift */; };
 		EE336A2D21A4111E00701254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE336A2B21A4111E00701254 /* Main.storyboard */; };
@@ -18,6 +18,8 @@
 		EE336A3221A4112000701254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE336A3021A4112000701254 /* LaunchScreen.storyboard */; };
 		EE336A3A21A4115E00701254 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE336A3921A4115E00701254 /* SecondViewController.swift */; };
 		EE336A3C21A4131500701254 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE336A3B21A4131500701254 /* ThirdViewController.swift */; };
+		EE37105E223B251700001404 /* RealmDateBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37105D223B251700001404 /* RealmDateBase.swift */; };
+		EE371060224341F400001404 /* FinishTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37105F224341F400001404 /* FinishTaskViewController.swift */; };
 		EE652B9521B679AC007E5703 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE652B9421B679AC007E5703 /* ReviewViewController.swift */; };
 		EE7C7B6921A95FBD00C5A612 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C7B6821A95FBD00C5A612 /* ListViewController.swift */; };
 		EE8836CD21B8D29200EED872 /* dash2.png in Resources */ = {isa = PBXBuildFile; fileRef = EE8836C921B8D29200EED872 /* dash2.png */; };
@@ -28,10 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		687D22D0825612822B3FF309 /* Pods_newunlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newunlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF33A3D4BE8AA7DCB2A80ED /* Pods-newunlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newunlock.release.xcconfig"; path = "Target Support Files/Pods-newunlock/Pods-newunlock.release.xcconfig"; sourceTree = "<group>"; };
 		EE2932C721A8105700BFFA12 /* fourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthViewController.swift; sourceTree = "<group>"; };
 		EE2932C921A819AA00BFFA12 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		EE2932CB21A8211900BFFA12 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
-		EE2932CE21A82A5800BFFA12 /* newunlockModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = newunlockModel.xcdatamodel; sourceTree = "<group>"; };
 		EE336A2421A4111E00701254 /* newunlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newunlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE336A2721A4111E00701254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE336A2921A4111E00701254 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +44,8 @@
 		EE336A3321A4112000701254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE336A3921A4115E00701254 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EE336A3B21A4131500701254 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		EE37105D223B251700001404 /* RealmDateBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDateBase.swift; sourceTree = "<group>"; };
+		EE37105F224341F400001404 /* FinishTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTaskViewController.swift; sourceTree = "<group>"; };
 		EE652B9421B679AC007E5703 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		EE7C7B6821A95FBD00C5A612 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		EE8836C921B8D29200EED872 /* dash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash2.png; sourceTree = SOURCE_ROOT; };
@@ -48,6 +53,7 @@
 		EE8836CB21B8D29200EED872 /* dash0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash0.png; sourceTree = SOURCE_ROOT; };
 		EE8836CC21B8D29200EED872 /* dash3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash3.png; sourceTree = SOURCE_ROOT; };
 		EE8836D121B8D39E00EED872 /* LaunchAnimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimeViewController.swift; sourceTree = "<group>"; };
+		F8B51BE363C7BCDD4070674C /* Pods-newunlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newunlock.debug.xcconfig"; path = "Target Support Files/Pods-newunlock/Pods-newunlock.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +61,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D35D8228D91F346B525D5D /* Pods_newunlock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		821D70E131ED4154E332AC73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8B51BE363C7BCDD4070674C /* Pods-newunlock.debug.xcconfig */,
+				CAF33A3D4BE8AA7DCB2A80ED /* Pods-newunlock.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EE336A1B21A4111E00701254 = {
 			isa = PBXGroup;
 			children = (
 				EE336A2621A4111E00701254 /* newunlock */,
 				EE336A2521A4111E00701254 /* Products */,
+				EE4E39FE22240B1A00C4AEA7 /* Frameworks */,
+				821D70E131ED4154E332AC73 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,26 +99,35 @@
 			isa = PBXGroup;
 			children = (
 				EE336A2721A4111E00701254 /* AppDelegate.swift */,
+				EE8836D121B8D39E00EED872 /* LaunchAnimeViewController.swift */,
 				EE336A2921A4111E00701254 /* ViewController.swift */,
 				EE336A3921A4115E00701254 /* SecondViewController.swift */,
 				EE336A3B21A4131500701254 /* ThirdViewController.swift */,
 				EE2932C721A8105700BFFA12 /* fourthViewController.swift */,
+				EE2932C921A819AA00BFFA12 /* FifthViewController.swift */,
+				EE652B9421B679AC007E5703 /* ReviewViewController.swift */,
+				EE7C7B6821A95FBD00C5A612 /* ListViewController.swift */,
+				EE2932CB21A8211900BFFA12 /* resultViewController.swift */,
+				EE37105D223B251700001404 /* RealmDateBase.swift */,
 				EE336A2B21A4111E00701254 /* Main.storyboard */,
-				EE8836D121B8D39E00EED872 /* LaunchAnimeViewController.swift */,
+				EE37105F224341F400001404 /* FinishTaskViewController.swift */,
 				EE8836CB21B8D29200EED872 /* dash0.png */,
 				EE8836CA21B8D29200EED872 /* dash1.png */,
 				EE8836C921B8D29200EED872 /* dash2.png */,
 				EE8836CC21B8D29200EED872 /* dash3.png */,
-				EE652B9421B679AC007E5703 /* ReviewViewController.swift */,
-				EE7C7B6821A95FBD00C5A612 /* ListViewController.swift */,
-				EE2932CD21A82A5800BFFA12 /* newunlockModel.xcdatamodeld */,
-				EE2932CB21A8211900BFFA12 /* resultViewController.swift */,
-				EE2932C921A819AA00BFFA12 /* FifthViewController.swift */,
 				EE336A2E21A4112000701254 /* Assets.xcassets */,
 				EE336A3021A4112000701254 /* LaunchScreen.storyboard */,
 				EE336A3321A4112000701254 /* Info.plist */,
 			);
 			path = newunlock;
+			sourceTree = "<group>";
+		};
+		EE4E39FE22240B1A00C4AEA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				687D22D0825612822B3FF309 /* Pods_newunlock.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE336A3621A4112000701254 /* Build configuration list for PBXNativeTarget "newunlock" */;
 			buildPhases = (
+				43A4BC0C1565BE47FD310FAA /* [CP] Check Pods Manifest.lock */,
 				EE336A2021A4111E00701254 /* Sources */,
 				EE336A2121A4111E00701254 /* Frameworks */,
 				EE336A2221A4111E00701254 /* Resources */,
+				56ED2E76105993BF787667EE /* [CP] Embed Pods Frameworks */,
+				34B73541CFCFC3F598813776 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +165,7 @@
 				TargetAttributes = {
 					EE336A2321A4111E00701254 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -173,15 +204,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34B73541CFCFC3F598813776 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-newunlock/Pods-newunlock-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-newunlock/Pods-newunlock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43A4BC0C1565BE47FD310FAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-newunlock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56ED2E76105993BF787667EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-newunlock/Pods-newunlock-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-newunlock/Pods-newunlock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE336A2021A4111E00701254 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE37105E223B251700001404 /* RealmDateBase.swift in Sources */,
 				EE2932CA21A819AA00BFFA12 /* FifthViewController.swift in Sources */,
 				EE2932C821A8105700BFFA12 /* fourthViewController.swift in Sources */,
 				EE652B9521B679AC007E5703 /* ReviewViewController.swift in Sources */,
-				EE2932CF21A82A5800BFFA12 /* newunlockModel.xcdatamodeld in Sources */,
+				EE371060224341F400001404 /* FinishTaskViewController.swift in Sources */,
 				EE8836D221B8D39E00EED872 /* LaunchAnimeViewController.swift in Sources */,
 				EE336A3A21A4115E00701254 /* SecondViewController.swift in Sources */,
 				EE336A2A21A4111E00701254 /* ViewController.swift in Sources */,
@@ -330,10 +437,15 @@
 		};
 		EE336A3721A4112000701254 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8B51BE363C7BCDD4070674C /* Pods-newunlock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HNBAS9RU7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = newunlock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,17 +453,22 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayoih.newunlock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		EE336A3821A4112000701254 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAF33A3D4BE8AA7DCB2A80ED /* Pods-newunlock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HNBAS9RU7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = newunlock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,7 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayoih.newunlock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -386,19 +503,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EE2932CD21A82A5800BFFA12 /* newunlockModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EE2932CE21A82A5800BFFA12 /* newunlockModel.xcdatamodel */,
-			);
-			currentVersion = EE2932CE21A82A5800BFFA12 /* newunlockModel.xcdatamodel */;
-			path = newunlockModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EE336A1C21A4111E00701254 /* Project object */;
 }

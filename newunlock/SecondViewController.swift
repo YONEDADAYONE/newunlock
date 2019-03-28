@@ -6,9 +6,11 @@
 //  Copyright © 2018年 hiroya. All rights reserved.
 //
 
+import TwitterCore
+import TwitterKit
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, TWTRComposerViewControllerDelegate {
     
 //    @IBOutlet weak var label: UILabel!
     
@@ -17,6 +19,31 @@ class SecondViewController: UIViewController {
     @IBAction func enter2(_ sender: Any)
     {
         performSegue(withIdentifier: "segueko", sender: self)
+        
+    }
+    
+    
+    @IBAction func button(_ sender: UIButton) {
+        func sndTweet() {
+            // 1.ログインされているか？
+            if TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers() {
+                // 2.ツィート開始
+                sndTweetExec()
+            } else {
+                // 3.認証開始
+                TWTRTwitter.sharedInstance().logIn(with: self, completion: { (session, error) in
+                    if let sess = session {
+                        print("Signed in as \(sess.userName)")
+                        // 4.ツィート開始
+                        self.sndTweetExec()
+                    } else {
+                        // 5.認証失敗
+                        print("login error: \(error?.localizedDescription)")
+                    }
+                })
+            }
+        }
+
         
     }
     
