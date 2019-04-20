@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var button: UIButton!
     
+    
+    
     // Screenの高さ
     var screenHeight:CGFloat!
     // Screenの幅
@@ -35,6 +37,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = UIColor(red: 0/255, green: 162/255, blue: 154/255, alpha: 1)
         
         scrollView.delegate = self
         textField.delegate = self
@@ -80,7 +84,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
     }
 
 }
-
+//https://qiita.com/ysk_1031/items/3adb1c1bf5678e7e6f98
 extension ViewController{
     //キーボードが表示された時に呼ばれる
     @objc func keyboardWillShow(notification: NSNotification) {

@@ -19,34 +19,55 @@ class SecondViewController: UIViewController, TWTRComposerViewControllerDelegate
     @IBAction func enter2(_ sender: Any)
     {
         performSegue(withIdentifier: "segueko", sender: self)
-        
     }
     
     
     @IBAction func button(_ sender: UIButton) {
-        func sndTweet() {
-            // 1.ログインされているか？
-            if TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers() {
-                // 2.ツィート開始
-                sndTweetExec()
-            } else {
-                // 3.認証開始
-                TWTRTwitter.sharedInstance().logIn(with: self, completion: { (session, error) in
-                    if let sess = session {
-                        print("Signed in as \(sess.userName)")
-                        // 4.ツィート開始
-                        self.sndTweetExec()
-                    } else {
-                        // 5.認証失敗
-                        print("login error: \(error?.localizedDescription)")
-                    }
-                })
-            }
-        }
-
+//        TWTRComposer().show(from: self) { _ in }
         
+        let shareImage = (UIImage)();getScreenShot().pngData()
+        
+        let str:String = "サンプルツィート"
+        
+        // 1.コントローラー初期化
+        let comp = TWTRComposerViewController.init(initialText: str, image: shareImage, videoData: nil)
+        
+        // 2.デレゲート
+        comp.delegate = self
+        
+        // 3.コントローラ表示
+        present(comp, animated: true, completion: nil)
     }
     
+    func getScreenShot()-> UIImage {
+        // キャプチャ範囲を決定
+        let width = Int(UIScreen.main.bounds.size.width)  //画面横幅いっぱい
+        let height = 100
+        let size = CGSize(width: width, height: height)
+        // ビットマップ画像のcontextを作成
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        // 対象のview内の描画をcontextに複写する.
+        self.view.layer.render(in: context)
+        // 現在のcontextのビットマップをUIImageとして取得.
+        let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        // contextを閉じる.
+        UIGraphicsEndImageContext()
+        return capturedImage
+    }
+//    func sndTweetExec() {
+//        let str:String = "サンプルツィート"
+//
+//        // 1.コントローラー初期化
+//        let comp = TWTRComposerViewController.init(initialText: str, image: nil, videoData: nil)
+//
+//        // 2.デレゲート
+//        comp.delegate = self
+//
+//        // 3.コントローラ表示
+//        present(comp, animated: true, completion: nil)
+//    }
+//
     
     override func prepare(for segueko: UIStoryboardSegue, sender: Any?)
     {

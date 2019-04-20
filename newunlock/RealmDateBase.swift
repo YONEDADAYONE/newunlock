@@ -16,6 +16,8 @@ class TrTodo: Object {
     @objc dynamic var Contents1 = ""
     @objc dynamic var Contents2 = ""
     @objc dynamic var Contents3 = ""
+    @objc dynamic var achievementFlg = true
+    @objc dynamic var  registrationDate = Date()
     
     //    // idをプライマリキーに設定
     override static func primaryKey() -> String? {

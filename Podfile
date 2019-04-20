@@ -8,5 +8,7 @@ target 'newunlock' do
   # Pods for newunlock
   pod 'RealmSwift'
   pod 'TwitterKit'
+  pod 'Onboard'
+  pod 'SwiftyOnboard'
 
 end

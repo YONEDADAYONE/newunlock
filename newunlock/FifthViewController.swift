@@ -15,10 +15,6 @@ class FifthViewController: UIViewController {
     var myString8 = String()
     @IBOutlet weak var FifthTextField: UITextField!
     
-    
-    var reviewViewController = ReviewViewController()
-    
-    
     @IBAction func enter4(_ sender: Any)
     {
         performSegue(withIdentifier: "seguekonbu", sender: self)
@@ -30,11 +26,12 @@ class FifthViewController: UIViewController {
     }
     
     override func prepare(for seguekonbu: UIStoryboardSegue, sender: Any?) {
-        var resultViewController = seguekonbu.destination as! resultViewController
-        resultViewController.myString9 = myString6
-        resultViewController.myString10 = myString7
-        resultViewController.myString11 = myString8
-        resultViewController.myString12 = FifthTextField.text!
+        let freeMemoViewController = seguekonbu.destination as! FreeMemoViewController
+        freeMemoViewController.myString9 = myString6
+        freeMemoViewController.myString10 = myString7
+        freeMemoViewController.myString11 = myString8
+        freeMemoViewController.myString12 = FifthTextField.text!
+//        var resultViewController = seguekonbu.destination as! OtherViewController
     }
 
 }

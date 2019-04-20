@@ -11,6 +11,8 @@
 		EE2932C821A8105700BFFA12 /* fourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2932C721A8105700BFFA12 /* fourthViewController.swift */; };
 		EE2932CA21A819AA00BFFA12 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2932C921A819AA00BFFA12 /* FifthViewController.swift */; };
 		EE2932CC21A8211900BFFA12 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2932CB21A8211900BFFA12 /* resultViewController.swift */; };
+		EE2B8F7B2259DF36009BEA52 /* SettingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B8F7A2259DF36009BEA52 /* SettingsTableTableViewController.swift */; };
+		EE2B8F7D2259EFC7009BEA52 /* GoToWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B8F7C2259EFC7009BEA52 /* GoToWebViewController.swift */; };
 		EE336A2821A4111E00701254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE336A2721A4111E00701254 /* AppDelegate.swift */; };
 		EE336A2A21A4111E00701254 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE336A2921A4111E00701254 /* ViewController.swift */; };
 		EE336A2D21A4111E00701254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE336A2B21A4111E00701254 /* Main.storyboard */; };
@@ -20,12 +22,15 @@
 		EE336A3C21A4131500701254 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE336A3B21A4131500701254 /* ThirdViewController.swift */; };
 		EE37105E223B251700001404 /* RealmDateBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37105D223B251700001404 /* RealmDateBase.swift */; };
 		EE371060224341F400001404 /* FinishTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37105F224341F400001404 /* FinishTaskViewController.swift */; };
+		EE395A222267ED4F004A4936 /* 南京錠2.png in Resources */ = {isa = PBXBuildFile; fileRef = EE395A212267ED4F004A4936 /* 南京錠2.png */; };
+		EE395A242267ED5C004A4936 /* 南京錠3.png in Resources */ = {isa = PBXBuildFile; fileRef = EE395A232267ED5C004A4936 /* 南京錠3.png */; };
+		EE3C5B752267519E00C6891B /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3C5B742267519E00C6891B /* SetViewController.swift */; };
+		EE3C5B77226751F000C6891B /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3C5B76226751F000C6891B /* Alarm.swift */; };
+		EE3C5B7F22676B4200C6891B /* FreeMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3C5B7E22676B4200C6891B /* FreeMemoViewController.swift */; };
+		EE3C5B812267E41000C6891B /* 南京錠1.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3C5B802267E40F00C6891B /* 南京錠1.png */; };
+		EE4043532260111600AFA3B2 /* GotoQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4043522260111500AFA3B2 /* GotoQuestionViewController.swift */; };
 		EE652B9521B679AC007E5703 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE652B9421B679AC007E5703 /* ReviewViewController.swift */; };
 		EE7C7B6921A95FBD00C5A612 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C7B6821A95FBD00C5A612 /* ListViewController.swift */; };
-		EE8836CD21B8D29200EED872 /* dash2.png in Resources */ = {isa = PBXBuildFile; fileRef = EE8836C921B8D29200EED872 /* dash2.png */; };
-		EE8836CE21B8D29200EED872 /* dash1.png in Resources */ = {isa = PBXBuildFile; fileRef = EE8836CA21B8D29200EED872 /* dash1.png */; };
-		EE8836CF21B8D29200EED872 /* dash0.png in Resources */ = {isa = PBXBuildFile; fileRef = EE8836CB21B8D29200EED872 /* dash0.png */; };
-		EE8836D021B8D29200EED872 /* dash3.png in Resources */ = {isa = PBXBuildFile; fileRef = EE8836CC21B8D29200EED872 /* dash3.png */; };
 		EE8836D221B8D39E00EED872 /* LaunchAnimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8836D121B8D39E00EED872 /* LaunchAnimeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +40,8 @@
 		EE2932C721A8105700BFFA12 /* fourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthViewController.swift; sourceTree = "<group>"; };
 		EE2932C921A819AA00BFFA12 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		EE2932CB21A8211900BFFA12 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
+		EE2B8F7A2259DF36009BEA52 /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
+		EE2B8F7C2259EFC7009BEA52 /* GoToWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToWebViewController.swift; sourceTree = "<group>"; };
 		EE336A2421A4111E00701254 /* newunlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newunlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE336A2721A4111E00701254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE336A2921A4111E00701254 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,12 +53,15 @@
 		EE336A3B21A4131500701254 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		EE37105D223B251700001404 /* RealmDateBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDateBase.swift; sourceTree = "<group>"; };
 		EE37105F224341F400001404 /* FinishTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTaskViewController.swift; sourceTree = "<group>"; };
+		EE395A212267ED4F004A4936 /* 南京錠2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南京錠2.png"; sourceTree = SOURCE_ROOT; };
+		EE395A232267ED5C004A4936 /* 南京錠3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南京錠3.png"; sourceTree = SOURCE_ROOT; };
+		EE3C5B742267519E00C6891B /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		EE3C5B76226751F000C6891B /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		EE3C5B7E22676B4200C6891B /* FreeMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMemoViewController.swift; sourceTree = "<group>"; };
+		EE3C5B802267E40F00C6891B /* 南京錠1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南京錠1.png"; sourceTree = "<group>"; };
+		EE4043522260111500AFA3B2 /* GotoQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotoQuestionViewController.swift; sourceTree = "<group>"; };
 		EE652B9421B679AC007E5703 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		EE7C7B6821A95FBD00C5A612 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		EE8836C921B8D29200EED872 /* dash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash2.png; sourceTree = SOURCE_ROOT; };
-		EE8836CA21B8D29200EED872 /* dash1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash1.png; sourceTree = SOURCE_ROOT; };
-		EE8836CB21B8D29200EED872 /* dash0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash0.png; sourceTree = SOURCE_ROOT; };
-		EE8836CC21B8D29200EED872 /* dash3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash3.png; sourceTree = SOURCE_ROOT; };
 		EE8836D121B8D39E00EED872 /* LaunchAnimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimeViewController.swift; sourceTree = "<group>"; };
 		F8B51BE363C7BCDD4070674C /* Pods-newunlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newunlock.debug.xcconfig"; path = "Target Support Files/Pods-newunlock/Pods-newunlock.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,14 +117,19 @@
 				EE2932C921A819AA00BFFA12 /* FifthViewController.swift */,
 				EE652B9421B679AC007E5703 /* ReviewViewController.swift */,
 				EE7C7B6821A95FBD00C5A612 /* ListViewController.swift */,
-				EE2932CB21A8211900BFFA12 /* resultViewController.swift */,
 				EE37105D223B251700001404 /* RealmDateBase.swift */,
+				EE2932CB21A8211900BFFA12 /* resultViewController.swift */,
 				EE336A2B21A4111E00701254 /* Main.storyboard */,
+				EE3C5B76226751F000C6891B /* Alarm.swift */,
+				EE3C5B742267519E00C6891B /* SetViewController.swift */,
+				EE4043522260111500AFA3B2 /* GotoQuestionViewController.swift */,
+				EE2B8F7C2259EFC7009BEA52 /* GoToWebViewController.swift */,
+				EE2B8F7A2259DF36009BEA52 /* SettingsTableTableViewController.swift */,
 				EE37105F224341F400001404 /* FinishTaskViewController.swift */,
-				EE8836CB21B8D29200EED872 /* dash0.png */,
-				EE8836CA21B8D29200EED872 /* dash1.png */,
-				EE8836C921B8D29200EED872 /* dash2.png */,
-				EE8836CC21B8D29200EED872 /* dash3.png */,
+				EE3C5B7E22676B4200C6891B /* FreeMemoViewController.swift */,
+				EE3C5B802267E40F00C6891B /* 南京錠1.png */,
+				EE395A212267ED4F004A4936 /* 南京錠2.png */,
+				EE395A232267ED5C004A4936 /* 南京錠3.png */,
 				EE336A2E21A4112000701254 /* Assets.xcassets */,
 				EE336A3021A4112000701254 /* LaunchScreen.storyboard */,
 				EE336A3321A4112000701254 /* Info.plist */,
@@ -194,11 +209,10 @@
 			files = (
 				EE336A3221A4112000701254 /* LaunchScreen.storyboard in Resources */,
 				EE336A2F21A4112000701254 /* Assets.xcassets in Resources */,
-				EE8836CD21B8D29200EED872 /* dash2.png in Resources */,
 				EE336A2D21A4111E00701254 /* Main.storyboard in Resources */,
-				EE8836D021B8D29200EED872 /* dash3.png in Resources */,
-				EE8836CF21B8D29200EED872 /* dash0.png in Resources */,
-				EE8836CE21B8D29200EED872 /* dash1.png in Resources */,
+				EE395A222267ED4F004A4936 /* 南京錠2.png in Resources */,
+				EE395A242267ED5C004A4936 /* 南京錠3.png in Resources */,
+				EE3C5B812267E41000C6891B /* 南京錠1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +272,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-newunlock/Pods-newunlock-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyOnboard/SwiftyOnboard.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
@@ -267,8 +283,10 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyOnboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
@@ -287,13 +305,19 @@
 				EE37105E223B251700001404 /* RealmDateBase.swift in Sources */,
 				EE2932CA21A819AA00BFFA12 /* FifthViewController.swift in Sources */,
 				EE2932C821A8105700BFFA12 /* fourthViewController.swift in Sources */,
+				EE2B8F7B2259DF36009BEA52 /* SettingsTableTableViewController.swift in Sources */,
+				EE3C5B7F22676B4200C6891B /* FreeMemoViewController.swift in Sources */,
 				EE652B9521B679AC007E5703 /* ReviewViewController.swift in Sources */,
+				EE4043532260111600AFA3B2 /* GotoQuestionViewController.swift in Sources */,
 				EE371060224341F400001404 /* FinishTaskViewController.swift in Sources */,
 				EE8836D221B8D39E00EED872 /* LaunchAnimeViewController.swift in Sources */,
+				EE3C5B77226751F000C6891B /* Alarm.swift in Sources */,
 				EE336A3A21A4115E00701254 /* SecondViewController.swift in Sources */,
 				EE336A2A21A4111E00701254 /* ViewController.swift in Sources */,
 				EE7C7B6921A95FBD00C5A612 /* ListViewController.swift in Sources */,
+				EE2B8F7D2259EFC7009BEA52 /* GoToWebViewController.swift in Sources */,
 				EE336A3C21A4131500701254 /* ThirdViewController.swift in Sources */,
+				EE3C5B752267519E00C6891B /* SetViewController.swift in Sources */,
 				EE336A2821A4111E00701254 /* AppDelegate.swift in Sources */,
 				EE2932CC21A8211900BFFA12 /* resultViewController.swift in Sources */,
 			);
