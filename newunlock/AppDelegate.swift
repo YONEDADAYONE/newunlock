@@ -10,6 +10,7 @@ import TwitterCore
 import TwitterKit
 import UIKit
 import Onboard
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TWTRTwitter.sharedInstance().start(withConsumerKey: "dvFuLqd8Of56DVlVuBkMR42UC", consumerSecret:
             "T4nG1hmvPfHkUFDktPR1cBQTmao4yTPmIA2qbJCw2T3t0PgOJm")
         
+        IQKeyboardManager.shared.enable = true
         
         // UserDefaultsを使ってフラグを保持する
         let userDefault = UserDefaults.standard

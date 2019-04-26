@@ -10,12 +10,13 @@ import Foundation
 import RealmSwift
 
 //var だけではRelme Brower で下記結果がnilになったが@objc dynamicを加えると正常になった
-class TrTodo: Object {
+class StorageBox: Object {
     @objc dynamic var id = 0
     @objc dynamic var title = ""
     @objc dynamic var Contents1 = ""
     @objc dynamic var Contents2 = ""
     @objc dynamic var Contents3 = ""
+    @objc dynamic var Contents4 = ""
     @objc dynamic var achievementFlg = true
     @objc dynamic var  registrationDate = Date()
     

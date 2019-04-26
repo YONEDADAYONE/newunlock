@@ -31,37 +31,41 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        var SecondController = segue.destination as! SecondViewController
-        SecondController.myString = textField.text!
+        var thirdViewController = segue.destination as! ThirdViewController
+        thirdViewController.myString3 = textField.text!
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red: 0/255, green: 162/255, blue: 154/255, alpha: 1)
-        
-        scrollView.delegate = self
-        textField.delegate = self
-        
-        // 画面サイズ取得
-        let screenSize: CGRect = UIScreen.main.bounds
-        screenWidth = screenSize.width
-        screenHeight = screenSize.height
-        
-        // 表示窓のサイズと位置を設定
-        scrollView.frame.size =
-            CGSize(width: screenWidth, height: screenHeight)
-        
-        // UIScrollViewに追加
-        scrollView.addSubview(textField)
-        scrollView.addSubview(button)
-        
-        // UIScrollViewの大きさをスクリーンの縦方向を２倍にする
-        scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight*2)
-        // スクロールの跳ね返り無し
-        scrollView.bounces = false
-        // ビューに追加
-        self.view.addSubview(scrollView)
+//        view.backgroundColor = UIColor(red: 0/255, green: 162/255, blue: 154/255, alpha: 1)
+//
+//        scrollView.delegate = self
+//        textField.delegate = self
+//
+//        // 画面サイズ取得
+//        let screenSize: CGRect = UIScreen.main.bounds
+//        screenWidth = screenSize.width
+//        screenHeight = screenSize.height
+//
+//        // 表示窓のサイズと位置を設定
+//        scrollView.frame.size =
+//            CGSize(width: screenWidth, height: screenHeight)
+//
+//        // UIScrollViewに追加
+//        scrollView.addSubview(textField)
+//        scrollView.addSubview(button)
+//
+//        // UIScrollViewの大きさをスクリーンの縦方向を２倍にする
+//        scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight*2)
+//        // スクロールの跳ね返り無し
+//        scrollView.bounces = false
+//        // ビューに追加
+//        self.view.addSubview(scrollView)
     }
     
     // 改行でキーボードを隠す
@@ -70,35 +74,35 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
         return true
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self,selector: #selector(self.keyboardWillShow(notification:)),name:UIResponder.keyboardWillShowNotification,object: nil)
-        NotificationCenter.default.addObserver(self,selector: #selector(self.keyboardWillHide(notification:)),name:UIResponder.keyboardWillHideNotification,object: nil)
-    }
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self,name:UIResponder.keyboardWillShowNotification,object: nil)
-        NotificationCenter.default.removeObserver(self,name:UIResponder.keyboardWillHideNotification,object: nil)
-    }
-
-}
-//https://qiita.com/ysk_1031/items/3adb1c1bf5678e7e6f98
-extension ViewController{
-    //キーボードが表示された時に呼ばれる
-    @objc func keyboardWillShow(notification: NSNotification) {
-        //キーボードが押された時に伸ばすコンテンツのサイズ
-        let insertHeight:CGFloat = 250
-        //スクロールビューのなかのコンテンツのサイズを指定
-        scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight + insertHeight)
-        let offset = CGPoint(x: 0, y: insertHeight)
-        //offsetで指定した分スクロールする
-        scrollView.setContentOffset(offset, animated: true)
-    }
-    //キーボードが閉じる時に呼ばれる
-    @objc func keyboardWillHide(notification: NSNotification) {
-        //スクロールビューのなかのコンテンツのサイズを元の大きさへ戻す
-        scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        NotificationCenter.default.addObserver(self,selector: #selector(self.keyboardWillShow(notification:)),name:UIResponder.keyboardWillShowNotification,object: nil)
+//        NotificationCenter.default.addObserver(self,selector: #selector(self.keyboardWillHide(notification:)),name:UIResponder.keyboardWillHideNotification,object: nil)
+//    }
+//
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        NotificationCenter.default.removeObserver(self,name:UIResponder.keyboardWillShowNotification,object: nil)
+//        NotificationCenter.default.removeObserver(self,name:UIResponder.keyboardWillHideNotification,object: nil)
+//    }
+//
+//}
+////https://qiita.com/ysk_1031/items/3adb1c1bf5678e7e6f98
+//extension ViewController{
+//    //キーボードが表示された時に呼ばれる
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        //キーボードが押された時に伸ばすコンテンツのサイズ
+//        let insertHeight:CGFloat = 250
+//        //スクロールビューのなかのコンテンツのサイズを指定
+//        scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight + insertHeight)
+//        let offset = CGPoint(x: 0, y: insertHeight)
+//        //offsetで指定した分スクロールする
+//        scrollView.setContentOffset(offset, animated: true)
+//    }
+//    //キーボードが閉じる時に呼ばれる
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        //スクロールビューのなかのコンテンツのサイズを元の大きさへ戻す
+//        scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight)
+//    }
 }

@@ -25,6 +25,16 @@ class FifthViewController: UIViewController {
     
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    // 改行でキーボードを隠す
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
     override func prepare(for seguekonbu: UIStoryboardSegue, sender: Any?) {
         let freeMemoViewController = seguekonbu.destination as! FreeMemoViewController
         freeMemoViewController.myString9 = myString6

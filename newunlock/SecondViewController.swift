@@ -75,7 +75,11 @@ class SecondViewController: UIViewController, TWTRComposerViewControllerDelegate
         ThirdViewController.myString3 = myString
     }
     
-    
+    // 改行でキーボードを隠す
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,9 +87,8 @@ class SecondViewController: UIViewController, TWTRComposerViewControllerDelegate
 //        label.text = myString
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     

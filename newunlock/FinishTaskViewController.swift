@@ -19,7 +19,10 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
     //    var myStrings:[String] = []
     
     //空の配列
-    var todoArray: [TrTodo] = []
+    var todoArray: [StorageBox] = []
+    //この配列に
+    var todoArray2: [String] = []
+    
     
     var bbb = Int()
     
@@ -33,23 +36,31 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var listTableView2: UITableView!
     
     let realm = try? Realm()
-    let storageBox = TrTodo()
+    let storageBox = StorageBox()
     
     var eee = 0
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         _ = try? Realm()
+        let tallPersons = realm?.objects(StorageBox.self).filter("achievementFlg = false")
+        //一番最初につくられるのはtrue
         
-        //一番最初につくられるのはｔrue
-        let tallPersons = realm?.objects(TrTodo.self).filter("achievementFlg = false")
+        //ここでrealmデータ更新?
+        var picturList: [StorageBox] = [];
+        print("知りたいよ\(picturList.count)")
+        for pictur in tallPersons! {
+            picturList.append(pictur);
+        }
         
-        print("知りたい\(tallPersons?.count)")
-        
+//        print("知りたい\(tallPersons?.count)")
+        print("知りたい\(picturList.count)。")
         print(todoArray.count)
         
-        return tallPersons?.count ?? 0
+//        return tallPersons?.count ?? 0
+        return picturList.count 
     }
     
     //    //スワイプで削除
@@ -73,6 +84,9 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
+    
+
+    
     @IBAction func SegumentControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -93,6 +107,7 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         var cell:UITableViewCell! = listTableView2.dequeueReusableCell(withIdentifier: "NameCell")
         
         let name = todoArray[indexPath.row]
@@ -114,7 +129,7 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
         //        print(name.Contents3)
         
         //http://swift.hiros-dot.net/?p=632 とても参考になった
-        let results = realm?.objects(TrTodo.self)
+        let results = realm?.objects(StorageBox.self)
         
         print(results?[0].id ?? 100)
         
@@ -126,6 +141,7 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
     // trueを返すことでCellのアクションを許可しています
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
     {
+        
         return true
     }
     
@@ -141,13 +157,40 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = try? Realm()
+        guard let realm = try? Realm() else {
+            return
+        }
         //空の配列のCityArrayにrelmeのデータを入れる
-        todoArray = Array((realm?.objects(TrTodo.self))!)
+        todoArray = Array(realm.objects(StorageBox.self))
         
         listTableView2.dataSource = self
         listTableView2.delegate = self
         fetchDate()
+    }
+    
+    
+    @IBAction func tap(_ sender: UIBarButtonItem) {
+        ccc()
+    }
+    
+    func test(){
+        
+        // DBから試合結果データの一覧取得
+        let realm = try! Realm()
+        let MatchResultList = realm.objects(StorageBox.self)
+        
+        // tableDataを初期化する場合
+        todoArray.removeAll()
+        
+//        // tableDataを設定
+//        MatchResultList.forEach{
+//            let cell = $0.title
+//            todoArray2.append(cell)
+//        }
+        
+        DispatchQueue.main.async {
+            self.listTableView2.reloadData()
+        }
     }
     
     //自作関数
@@ -157,7 +200,7 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         //空の配列todoArrayにrelmeのデータを入れてフィルターをかける
         do {
-            todoArray = Array(realm.objects(TrTodo.self).filter("achievementFlg = 0").sorted(byKeyPath: "registrationDate", ascending: true))
+            todoArray = Array(realm.objects(StorageBox.self).filter("achievementFlg = 0").sorted(byKeyPath: "registrationDate", ascending: true))
         }
         
     }
@@ -166,12 +209,13 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepare(for segusegu: UIStoryboardSegue, sender: Any?)
     {
         if let selectedRow = listTableView2.indexPathForSelectedRow {
-            let controller = segusegu.destination as! ReviewViewController
+            let controller = segusegu.destination as! AlbumTableViewController
             print("セレクトは\(selectedRow.row)")
             print("prepare")
             controller.aaa = selectedRow.row
         }
     }
+    
 }
 
 

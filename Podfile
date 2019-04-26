@@ -9,6 +9,6 @@ target 'newunlock' do
   pod 'RealmSwift'
   pod 'TwitterKit'
   pod 'Onboard'
-  pod 'SwiftyOnboard'
+  pod 'IQKeyboardManagerSwift'
 
 end

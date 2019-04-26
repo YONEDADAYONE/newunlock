@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class FreeMemoViewController: UIViewController {
     
@@ -24,16 +25,21 @@ class FreeMemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //TextViewを角丸にするプロパティ
+        memoTextView.layer.cornerRadius = 15
     }
     
-    override func prepare(for seguekonbu: UIStoryboardSegue, sender: Any?) {
-        let setViewController = seguekonbu.destination as! SetViewController
-        setViewController.myString13 = myString9
-        setViewController.myString14 = myString10
-        setViewController.myString15 = myString11
-        setViewController.myString16 = myString12
-        setViewController.myString17 = memoTextView.text!
+    override func prepare(for segueri: UIStoryboardSegue, sender: Any?) {
+        let resultTableViewController = segueri.destination as! ResultTableViewController
+        resultTableViewController.registrationString = myString9
+        resultTableViewController.registrationString2 = myString10
+        resultTableViewController.registrationString3 = myString11
+        resultTableViewController.registrationString4 = myString12
+        resultTableViewController.registrationString5 = memoTextView.text!
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }

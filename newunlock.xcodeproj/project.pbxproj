@@ -24,11 +24,20 @@
 		EE371060224341F400001404 /* FinishTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37105F224341F400001404 /* FinishTaskViewController.swift */; };
 		EE395A222267ED4F004A4936 /* 南京錠2.png in Resources */ = {isa = PBXBuildFile; fileRef = EE395A212267ED4F004A4936 /* 南京錠2.png */; };
 		EE395A242267ED5C004A4936 /* 南京錠3.png in Resources */ = {isa = PBXBuildFile; fileRef = EE395A232267ED5C004A4936 /* 南京錠3.png */; };
-		EE3C5B752267519E00C6891B /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3C5B742267519E00C6891B /* SetViewController.swift */; };
+		EE39CDDF226FDCAF001D1FFD /* twitterのアイコン素材.png in Resources */ = {isa = PBXBuildFile; fileRef = EE39CDDE226FDCAF001D1FFD /* twitterのアイコン素材.png */; };
+		EE39CDE1226FDD93001D1FFD /* twitterのアイコン素材 その2.png in Resources */ = {isa = PBXBuildFile; fileRef = EE39CDE0226FDD93001D1FFD /* twitterのアイコン素材 その2.png */; };
+		EE39CDE5226FDF09001D1FFD /* ちゅいったー.png in Resources */ = {isa = PBXBuildFile; fileRef = EE39CDE4226FDF09001D1FFD /* ちゅいったー.png */; };
+		EE3B4113226D44B900A6F0B8 /* 鍵穴からハート.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3B4112226D44B800A6F0B8 /* 鍵穴からハート.png */; };
+		EE3B4115226E8A9600A6F0B8 /* InquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3B4114226E8A9600A6F0B8 /* InquiryViewController.swift */; };
+		EE3B4117226F467400A6F0B8 /* 鍵.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3B4116226F467400A6F0B8 /* 鍵.png */; };
+		EE3B4119226F474E00A6F0B8 /* 南京錠空き.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3B4118226F474E00A6F0B8 /* 南京錠空き.png */; };
 		EE3C5B77226751F000C6891B /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3C5B76226751F000C6891B /* Alarm.swift */; };
 		EE3C5B7F22676B4200C6891B /* FreeMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3C5B7E22676B4200C6891B /* FreeMemoViewController.swift */; };
 		EE3C5B812267E41000C6891B /* 南京錠1.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3C5B802267E40F00C6891B /* 南京錠1.png */; };
 		EE4043532260111600AFA3B2 /* GotoQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4043522260111500AFA3B2 /* GotoQuestionViewController.swift */; };
+		EE490261226B8A9E0010D142 /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE490260226B8A9E0010D142 /* AlbumTableViewController.swift */; };
+		EE490263226C1EB60010D142 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE490262226C1EB60010D142 /* ResultTableViewController.swift */; };
+		EE490265226C4C850010D142 /* LastResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE490264226C4C850010D142 /* LastResultTableViewController.swift */; };
 		EE652B9521B679AC007E5703 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE652B9421B679AC007E5703 /* ReviewViewController.swift */; };
 		EE7C7B6921A95FBD00C5A612 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C7B6821A95FBD00C5A612 /* ListViewController.swift */; };
 		EE8836D221B8D39E00EED872 /* LaunchAnimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8836D121B8D39E00EED872 /* LaunchAnimeViewController.swift */; };
@@ -55,11 +64,20 @@
 		EE37105F224341F400001404 /* FinishTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTaskViewController.swift; sourceTree = "<group>"; };
 		EE395A212267ED4F004A4936 /* 南京錠2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南京錠2.png"; sourceTree = SOURCE_ROOT; };
 		EE395A232267ED5C004A4936 /* 南京錠3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南京錠3.png"; sourceTree = SOURCE_ROOT; };
-		EE3C5B742267519E00C6891B /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		EE39CDDE226FDCAF001D1FFD /* twitterのアイコン素材.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterのアイコン素材.png"; sourceTree = SOURCE_ROOT; };
+		EE39CDE0226FDD93001D1FFD /* twitterのアイコン素材 その2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterのアイコン素材 その2.png"; sourceTree = SOURCE_ROOT; };
+		EE39CDE4226FDF09001D1FFD /* ちゅいったー.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ちゅいったー.png"; sourceTree = SOURCE_ROOT; };
+		EE3B4112226D44B800A6F0B8 /* 鍵穴からハート.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "鍵穴からハート.png"; sourceTree = SOURCE_ROOT; };
+		EE3B4114226E8A9600A6F0B8 /* InquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryViewController.swift; sourceTree = "<group>"; };
+		EE3B4116226F467400A6F0B8 /* 鍵.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "鍵.png"; sourceTree = SOURCE_ROOT; };
+		EE3B4118226F474E00A6F0B8 /* 南京錠空き.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南京錠空き.png"; sourceTree = SOURCE_ROOT; };
 		EE3C5B76226751F000C6891B /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		EE3C5B7E22676B4200C6891B /* FreeMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMemoViewController.swift; sourceTree = "<group>"; };
 		EE3C5B802267E40F00C6891B /* 南京錠1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南京錠1.png"; sourceTree = "<group>"; };
 		EE4043522260111500AFA3B2 /* GotoQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotoQuestionViewController.swift; sourceTree = "<group>"; };
+		EE490260226B8A9E0010D142 /* AlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
+		EE490262226C1EB60010D142 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		EE490264226C4C850010D142 /* LastResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultTableViewController.swift; sourceTree = "<group>"; };
 		EE652B9421B679AC007E5703 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		EE7C7B6821A95FBD00C5A612 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		EE8836D121B8D39E00EED872 /* LaunchAnimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimeViewController.swift; sourceTree = "<group>"; };
@@ -120,17 +138,26 @@
 				EE37105D223B251700001404 /* RealmDateBase.swift */,
 				EE2932CB21A8211900BFFA12 /* resultViewController.swift */,
 				EE336A2B21A4111E00701254 /* Main.storyboard */,
+				EE3B4114226E8A9600A6F0B8 /* InquiryViewController.swift */,
+				EE490264226C4C850010D142 /* LastResultTableViewController.swift */,
+				EE490262226C1EB60010D142 /* ResultTableViewController.swift */,
+				EE490260226B8A9E0010D142 /* AlbumTableViewController.swift */,
 				EE3C5B76226751F000C6891B /* Alarm.swift */,
-				EE3C5B742267519E00C6891B /* SetViewController.swift */,
 				EE4043522260111500AFA3B2 /* GotoQuestionViewController.swift */,
 				EE2B8F7C2259EFC7009BEA52 /* GoToWebViewController.swift */,
 				EE2B8F7A2259DF36009BEA52 /* SettingsTableTableViewController.swift */,
 				EE37105F224341F400001404 /* FinishTaskViewController.swift */,
 				EE3C5B7E22676B4200C6891B /* FreeMemoViewController.swift */,
+				EE39CDE4226FDF09001D1FFD /* ちゅいったー.png */,
+				EE39CDDE226FDCAF001D1FFD /* twitterのアイコン素材.png */,
+				EE3B4118226F474E00A6F0B8 /* 南京錠空き.png */,
+				EE39CDE0226FDD93001D1FFD /* twitterのアイコン素材 その2.png */,
 				EE3C5B802267E40F00C6891B /* 南京錠1.png */,
 				EE395A212267ED4F004A4936 /* 南京錠2.png */,
 				EE395A232267ED5C004A4936 /* 南京錠3.png */,
 				EE336A2E21A4112000701254 /* Assets.xcassets */,
+				EE3B4112226D44B800A6F0B8 /* 鍵穴からハート.png */,
+				EE3B4116226F467400A6F0B8 /* 鍵.png */,
 				EE336A3021A4112000701254 /* LaunchScreen.storyboard */,
 				EE336A3321A4112000701254 /* Info.plist */,
 			);
@@ -207,11 +234,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3B4113226D44B900A6F0B8 /* 鍵穴からハート.png in Resources */,
 				EE336A3221A4112000701254 /* LaunchScreen.storyboard in Resources */,
+				EE3B4119226F474E00A6F0B8 /* 南京錠空き.png in Resources */,
+				EE39CDE1226FDD93001D1FFD /* twitterのアイコン素材 その2.png in Resources */,
 				EE336A2F21A4112000701254 /* Assets.xcassets in Resources */,
 				EE336A2D21A4111E00701254 /* Main.storyboard in Resources */,
 				EE395A222267ED4F004A4936 /* 南京錠2.png in Resources */,
+				EE3B4117226F467400A6F0B8 /* 鍵.png in Resources */,
 				EE395A242267ED5C004A4936 /* 南京錠3.png in Resources */,
+				EE39CDE5226FDF09001D1FFD /* ちゅいったー.png in Resources */,
+				EE39CDDF226FDCAF001D1FFD /* twitterのアイコン素材.png in Resources */,
 				EE3C5B812267E41000C6891B /* 南京錠1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,10 +305,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-newunlock/Pods-newunlock-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyOnboard/SwiftyOnboard.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
@@ -283,10 +316,10 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyOnboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
@@ -306,6 +339,7 @@
 				EE2932CA21A819AA00BFFA12 /* FifthViewController.swift in Sources */,
 				EE2932C821A8105700BFFA12 /* fourthViewController.swift in Sources */,
 				EE2B8F7B2259DF36009BEA52 /* SettingsTableTableViewController.swift in Sources */,
+				EE490265226C4C850010D142 /* LastResultTableViewController.swift in Sources */,
 				EE3C5B7F22676B4200C6891B /* FreeMemoViewController.swift in Sources */,
 				EE652B9521B679AC007E5703 /* ReviewViewController.swift in Sources */,
 				EE4043532260111600AFA3B2 /* GotoQuestionViewController.swift in Sources */,
@@ -313,11 +347,13 @@
 				EE8836D221B8D39E00EED872 /* LaunchAnimeViewController.swift in Sources */,
 				EE3C5B77226751F000C6891B /* Alarm.swift in Sources */,
 				EE336A3A21A4115E00701254 /* SecondViewController.swift in Sources */,
+				EE3B4115226E8A9600A6F0B8 /* InquiryViewController.swift in Sources */,
 				EE336A2A21A4111E00701254 /* ViewController.swift in Sources */,
+				EE490263226C1EB60010D142 /* ResultTableViewController.swift in Sources */,
 				EE7C7B6921A95FBD00C5A612 /* ListViewController.swift in Sources */,
 				EE2B8F7D2259EFC7009BEA52 /* GoToWebViewController.swift in Sources */,
+				EE490261226B8A9E0010D142 /* AlbumTableViewController.swift in Sources */,
 				EE336A3C21A4131500701254 /* ThirdViewController.swift in Sources */,
-				EE3C5B752267519E00C6891B /* SetViewController.swift in Sources */,
 				EE336A2821A4111E00701254 /* AppDelegate.swift in Sources */,
 				EE2932CC21A8211900BFFA12 /* resultViewController.swift in Sources */,
 			);

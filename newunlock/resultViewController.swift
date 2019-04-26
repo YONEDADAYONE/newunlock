@@ -23,7 +23,7 @@ class resultViewController: UIViewController {
     
     let realm = try? Realm()
     //todo 名前変更すること
-    let storageBox = TrTodo()
+    let storageBox = StorageBox()
     
     var storage = ""
     var storage2 = ""
@@ -50,7 +50,7 @@ class resultViewController: UIViewController {
         
         //プライマリーキーIDに1ずつ足す方法
         //https://qiita.com/kotala_b/items/68b9608df6c8bac80f67
-        var maxId: Int? { return try? Realm().objects(TrTodo.self).sorted(byKeyPath: "id").last?.id ?? 0 }
+        var maxId: Int? { return try? Realm().objects(StorageBox.self).sorted(byKeyPath: "id").last?.id ?? 0 }
         storageBox.setValue(storageBox.id + 1, forKey: "id")
         storageBox.id = maxId! + 1
         storageBox.setValue(storage, forKey: "title")

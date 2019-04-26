@@ -12,14 +12,16 @@ class SettingsTableTableViewController: UITableViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var inquiryLabel: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         if let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
             versionLabel.text = version
         }
     }
+    
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2

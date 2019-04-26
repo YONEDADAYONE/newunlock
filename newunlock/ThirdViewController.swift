@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import RealmSwift
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController,UITabBarDelegate {
 
     @IBOutlet weak var ThirdLabel: UILabel!
     var myString3 = String()
@@ -18,6 +19,13 @@ class ThirdViewController: UIViewController {
     @IBAction func enter3(_ sender: Any)
     {
         performSegue(withIdentifier: "segueTaro", sender: self)
+        print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
+    }
+    
+    // 改行でキーボードを隠す
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     override func prepare(for segueTaro: UIStoryboardSegue, sender: Any?)
@@ -30,6 +38,15 @@ class ThirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.tabBar.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

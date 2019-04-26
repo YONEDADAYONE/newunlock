@@ -27,6 +27,16 @@ class fourthViewController: UIViewController {
         FifthViewController.myString8 = fourthTextField.text!
     }
     
+    // 改行でキーボードを隠す
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

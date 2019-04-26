@@ -22,7 +22,7 @@ class ReviewViewController: UIViewController, TWTRComposerViewControllerDelegate
     
     var aaa = 0
     let realm = try? Realm()
-    var todoArray: [TrTodo] = []
+    var todoArray: [StorageBox] = []
     //空の変数の入れ物を用意
     var imgTweet: UIImageView?
     var tvTweet: UITextView?
@@ -34,9 +34,9 @@ class ReviewViewController: UIViewController, TWTRComposerViewControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        todoArray = Array((realm?.objects(TrTodo.self))!)
+        todoArray = Array((realm?.objects(StorageBox.self))!)
     
-        let results = realm?.objects(TrTodo.self)
+        let results = realm?.objects(StorageBox.self)
     
         Label1.text = results?[aaa].Contents1 ?? "a"
         label2.text = results?[aaa].Contents2 ?? "a"
