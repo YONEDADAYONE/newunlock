@@ -25,7 +25,6 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     var bbb = Int()
-    
     var reviewViewController = ReviewViewController()
     
     
@@ -44,23 +43,34 @@ class FinishTaskViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        //1秒スリープ
+        Thread.sleep(forTimeInterval: 1.0)
+        
         _ = try? Realm()
-        let tallPersons = realm?.objects(StorageBox.self).filter("achievementFlg = false")
+        let filterAchievementFlgFalse = realm?.objects(StorageBox.self).filter("achievementFlg = false")
         //一番最初につくられるのはtrue
+
+        //カウント数を入れる変数
+        var i = 0
+        
+        i = filterAchievementFlgFalse?.count ?? 0
+        
+        print("happyhappy\(i)")
         
         //ここでrealmデータ更新?
-        var picturList: [StorageBox] = [];
-        print("知りたいよ\(picturList.count)")
-        for pictur in tallPersons! {
-            picturList.append(pictur);
-        }
+//        var picturList: [String] = [];
+//        print("知りたいよ\(picturList.count)")
+//        for pictur in picturList {
+//            picturList.append(pictur);
+//        }
         
 //        print("知りたい\(tallPersons?.count)")
-        print("知りたい\(picturList.count)。")
+//        print("知りたい\((i as AnyObject).count)。")
         print(todoArray.count)
         
-//        return tallPersons?.count ?? 0
-        return picturList.count 
+//        return (i as AnyObject).count ?? 0
+        return i ?? 0
+//        return filterAchievementFlgFalse?.count ?? 00
     }
     
     //    //スワイプで削除

@@ -500,6 +500,13 @@
                                     <action selector="enter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJd-lA-FO4"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0m-KO-6T4">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="Oze-Wg-pWI"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.1195349483" green="0.68688577409999996" blue="0.277538805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -598,7 +605,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vUr-rB-7tY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LCa-Jt-TzL"/>
                     <connections>
                         <outlet property="ThirdLabel" destination="mWF-aw-7t2" id="Uub-Ru-Aoq"/>
                         <outlet property="secondTextField" destination="QUV-cF-IGE" id="DTo-Uw-rSO"/>
@@ -607,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nd-EF-9IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2940" y="-550.35211267605632"/>
+            <point key="canvasLocation" x="-3731" y="-550"/>
         </scene>
         <!--Fourth View Controller-->
         <scene sceneID="Zw0-Ce-02f">
