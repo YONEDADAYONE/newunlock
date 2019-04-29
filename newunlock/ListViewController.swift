@@ -34,45 +34,79 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     let storageBox = StorageBox()
     
     var eee = 0
+    var refreshControl: UIRefreshControl!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+//        DispatchQueue.main.async {
+//            self.ListTableView.reloadData()
+//        }
         
         _ = try? Realm()
         
         //一番最初につくられるのはtrue
-        let city = realm?.objects(StorageBox.self).filter("achievementFlg = true")
+        let city = realm?.objects(StorageBox.self).filter("achievementFlg = true").filter("deleteFlg = true")
         
-        print("知りたいいい\(city?.count)")
+        
+//        print("知りたいいい\(city?.count)")
         
         print(todoArray.count)
         
-        if todoArray.count == city?.count {
+//        if todoArray.count == city?.count {
+//
+//            return todoArray.count
+//        } else {
+//            return todoArray.count - city!.count
+//        }
 
-            return todoArray.count
-        } else {
-            return todoArray.count - city!.count
-        }
-
+        var i = 0
         
+        i = city?.count ?? 0
         
-        return todoArray.count
+        print("happyhappy\(i)")
+        
+        return i
     }
     
-//    //スワイプで削除
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        let city = todoArray[indexPath.row]
-        let realm = try? Realm()
+////    //スワイプで削除
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        let city = todoArray[indexPath.row]
+//        let realm = try? Realm()
+//
+//        if editingStyle == UITableViewCell.EditingStyle.delete {
+//
+//            let realm = try? Realm()
+//            try! realm?.write {
+//            let city = todoArray[indexPath.row]
+//            realm?.delete(city)
+//            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+//            }
+//        }
+//        return
+//    }
+    
+    // iOS11以降
+    // 右から左へスワイプ
+    @available(iOS 11.0, *)
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
-        if editingStyle == UITableViewCell.EditingStyle.delete {
+        let deleteAction = UIContextualAction(style: .destructive,
+                                              title: "Delete",
+                                              handler: { (action: UIContextualAction, view: UIView, completion: (Bool) -> Void) in
+                                                print("Delete")
+                                                // 処理を実行できなかった場合はfalse
+                                                completion(true)
 
-            let realm = try? Realm()
-            try! realm?.write {
-            let city = todoArray[indexPath.row]
-            realm?.delete(city)
-            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
-            }
-        }
-        return
+                                                //デリートフラグ
+                                                let realm = try? Realm()
+                                                try! realm?.write {
+                                                    let city = self.todoArray[indexPath.row]
+                                                    city.deleteFlg = false
+                                                }
+        })
+        deleteAction.backgroundColor = UIColor(red: 214/255.0, green: 69/255.0, blue: 65/255.0, alpha: 1)
+
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
     //https://www.youtube.com/watch?v=wUVfE8cY2Hw
@@ -82,22 +116,32 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let favoriteAction = UIContextualAction(style: .destructive,
-                                                title: "達成",
+                                                title: "achieve",
                                                 handler: { (action: UIContextualAction, view: UIView, completion: (Bool) -> Void) in
                                                     print("Favorite")
                                                     // 処理を実行完了した場合はtrue
                                                     
                                                     let realm = try? Realm()
+                                                    
+                                                    let city = realm?.objects(StorageBox.self).filter("achievementFlg = true").filter("deleteFlg = true")
+                                                    
+                                                    let name = city?[indexPath.row]
+                                                    
+                                                        //                                                       realm?.delete(city)
+                                                        
+                                                        let selectedRow = self.ListTableView.indexPathForSelectedRow
+                                                            //todoArrayに入っている配列にタップされたcell番号を入れ、そのidを取り出してる
+//                                                        city2?[selectedRow?.row ?? 0].achievementFlg = true
                                                     try! realm?.write {
-                                                        let city = self.todoArray[indexPath.row]
-//                                                        realm?.delete(city)
-                                                        city.achievementFlg = false
+                                                        name?.achievementFlg = false
+//                                                        print("まいまい\(city2?[0].achievementFlg)")
+//                                                        print("まいまい\(city2?[0].achievementFlg ?? true)")
                                                     }
                                                     
                                                     completion(true)
         })
         favoriteAction.backgroundColor = UIColor(red: 210/255.0, green: 82/255.0, blue: 127/255.0, alpha: 1)
-        favoriteAction.image = #imageLiteral(resourceName: "学生帽のアイコン素材")
+        //        favoriteAction.image = #imageLiteral(resourceName: "学生帽のアイコン素材")
         
         return UISwipeActionsConfiguration(actions: [favoriteAction])
     }
@@ -107,9 +151,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 0:
             print("やったー")
             bbb = 0
+            refresh()
         case 1:
             print("残念")
             bbb = 1
+            refresh()
         default:
             break
         }
@@ -148,6 +194,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    
+    
 //    private func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
 //        return true
 //    }
@@ -170,16 +218,24 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         var cell:UITableViewCell! = ListTableView.dequeueReusableCell(withIdentifier: "NameCell")
+
+        //todo
+
         
-        let name = todoArray[indexPath.row]
+        let city = realm?.objects(StorageBox.self).filter("achievementFlg = true").filter("deleteFlg = true")
         
+        let name = city?[indexPath.row]
         
-        if bbb == 0 && name.achievementFlg == true
+        print(name)
+//        print(todoArray[indexPath.row])
+        
+        if bbb == 0 && name?.achievementFlg == true && name?.deleteFlg == true
         {
-            cell.textLabel?.text = name.title
-        } else if bbb == 1 && name.achievementFlg == true {
-            cell.textLabel?.text = name.Contents1
+            cell.textLabel?.text = name?.title
+        } else if bbb == 1 && name?.achievementFlg == true && name?.deleteFlg == true{
+            cell.textLabel?.text = name?.Contents1
         } else {
             print("nai")
         }
@@ -193,7 +249,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         //http://swift.hiros-dot.net/?p=632 とても参考になった
         let results = realm?.objects(StorageBox.self)
         
-        print(results?[0].id ?? 100)
+        print("ああああああ\(results?[0].id ?? 100)")
         
 //        cell.textLabel?.lineBreakMode = .byTruncatingTail
         return cell
@@ -214,6 +270,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initializePullToRefresh()
+        
         guard let realm = try? Realm() else {
             return
         }
@@ -224,15 +283,58 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         ListTableView.delegate = self
         fetchDate()
     }
+    //http://mothulog.hateblo.jp/entry/uitableview-pull-to-refresh
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refresh()
+    }
+    
+    // MARK: - Pull to Refresh
+    private func initializePullToRefresh() {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(onPullToRefresh(_:)), for: .valueChanged)
+        ListTableView.addSubview(control)
+        refreshControl = control
+    }
+    
+    @objc private func onPullToRefresh(_ sender: AnyObject) {
+        refresh()
+    }
+    
+    private func stopPullToRefresh() {
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
+    }
+    
+    // MARK: - Data Flow
+    private func refresh() {
+        DispatchQueue.global().async {
+//            Thread.sleep(forTimeInterval: 1.0)
+            DispatchQueue.main.async {
+                self.completeRefresh()
+            }
+        }
+    }
+    
+    private func completeRefresh() {
+        stopPullToRefresh()
+        ListTableView.reloadData()
+    }
     
     //自作関数
     func fetchDate() {
+        
+        DispatchQueue.main.async {
+            self.ListTableView.reloadData()
+        }
+        
         guard let realm = try? Realm() else {
             return
         }
         //空の配列todoArrayにrelmeのデータを入れてフィルターをかける
         do {
-            todoArray = Array(realm.objects(StorageBox.self).filter("achievementFlg = 1").sorted(byKeyPath: "registrationDate", ascending: true))
+            todoArray = Array(realm.objects(StorageBox.self).sorted(byKeyPath: "registrationDate", ascending: true).filter("deleteFlg = 1").filter("achievementFlg = 1"))
         }
         
     }
@@ -242,9 +344,32 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     {
         if let selectedRow = ListTableView.indexPathForSelectedRow {
             let controller = seguen.destination as! AlbumTableViewController
-            print("セレクトは\(selectedRow.row)")
-            print("prepare")
-            controller.aaa = selectedRow.row
+//            print("セレクトは\(selectedRow.row)")
+//            print("ストレージボックスは\(storageBox.id)")
+            print(todoArray.description)
+            print("アイウエオ\(todoArray[0].id)")
+            
+
+            print(todoArray.last)
+    
+            
+            //todoArrayに入っている配列にタップされたcell番号を入れ、そのidを取り出してる
+//            controller.aaa = todoArray[selectedRow.row].id
+            
+            let city = realm?.objects(StorageBox.self).filter("achievementFlg = true").filter("deleteFlg = true")
+            controller.aaa = city?[selectedRow.row].id ?? 0
         }
     }
+    
+//    override func prepare(for seguen: UIStoryboardSegue, sender: Any?)
+//    {
+//        if let selectedRow = ListTableView.indexPathForSelectedRow {
+//            let controller = seguen.destination as! AlbumTableViewController
+//            print("セレクトは\(selectedRow.row)")
+//            print("ストレージボックスは\(storageBox.id)")
+//            print("prepare")
+//            controller.aaa = selectedRow.row
+////            controller.aaa = storageBox.id
+//        }
+//    }
 }

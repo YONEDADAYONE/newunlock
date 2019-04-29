@@ -36,25 +36,127 @@ class AlbumTableViewController: UITableViewController,TWTRComposerViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         todoArray = Array((realm?.objects(StorageBox.self))!)
         
         let results = realm?.objects(StorageBox.self)
         
-        listCell.textLabel?.text = results?[aaa].title ?? "a"
-        listCell2.textLabel?.text = results?[aaa].Contents1
-        listCell3.textLabel?.text = results?[aaa].Contents2 ?? "a"
-        listCell4.textLabel?.text = results?[aaa].Contents3 ?? "a"
-        listCell5.textLabel?.text = results?[aaa].Contents4 ?? "a"
         
-        print("眠い...\(results?[aaa].id ?? 100)")
-        print("眠い...\(results?[aaa].Contents1 ?? "a")")
-        print("眠い...\(results?[aaa].Contents2 ?? "a")")
-        print("眠い...\(results?[aaa].Contents3 ?? "a")")
-        print("眠い...\(results?[aaa].title ?? "100")")
+        print("まいまい\(aaa)")
+        
+        listCell.textLabel?.text = results?[aaa - 1].title ?? "a"
+        listCell2.textLabel?.text = results?[aaa - 1].Contents1
+        listCell3.textLabel?.text = results?[aaa - 1].Contents2 ?? "a"
+        listCell4.textLabel?.text = results?[aaa - 1].Contents3 ?? "a"
+        listCell5.textLabel?.text = results?[aaa - 1].Contents4 ?? "a"
+        
+        print("眠い...\(results?[aaa - 1].id ?? 100)")
+        print("眠い...\(results?[aaa - 1].Contents1 ?? "a")")
+        print("眠い...\(results?[aaa - 1].Contents2 ?? "a")")
+        print("眠い...\(results?[aaa - 1].Contents3 ?? "a")")
+        print("眠い...\(results?[aaa - 1].title ?? "100")")
         
     }
     
     @IBAction func goToTwitter(_ sender: UIBarButtonItem) {
+        
+        // 1.ログインされているか？
+        if TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers() {
+            // 2.ツィート開始
+            sndTweet()
+        } else {
+            // 3.認証開始
+            TWTRTwitter.sharedInstance().logIn(with: self, completion: { (session, error) in
+                if let sess = session {
+                    print("Signed in as \(sess.userName)")
+                    // 4.ツィート開始
+                    self.sndTweet()
+                } else {
+                    // 5.認証失敗
+                    print("login error: \(error?.localizedDescription)")
+                }
+            })
+        }
+        
+//        if TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers() {
+//
+//            // キャプチャしたい枠を決める
+//            let rect = view.bounds
+//
+//            UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+//
+//            // ここでtrueを指定しないと、画面が変わった時に再キャプチャできないらしい
+//            view.drawHierarchy(in: rect, afterScreenUpdates: true)
+//
+//            let cont = UIGraphicsGetCurrentContext()
+//            view.layer.render(in: cont!)
+//
+//            // キャプチャした画像を変数に保持
+//            let image = UIGraphicsGetImageFromCurrentImageContext()!
+//
+//            UIGraphicsEndImageContext()
+//
+//            let shareImg2: UIImage = image
+//
+//            //            let overView = Overview.init(initialText: "メガネを探す女性です。", image: shareImg2, videoURL: nil)
+//
+//            let composer = TWTRComposerViewController(initialText: "#Heart’s Unlock", image: shareImg2, videoURL: nil)
+//
+//            composer.delegate = self
+//            present(composer, animated: true, completion: nil)
+//
+//            //        } else {
+//            //                    let alert = UIAlertController(title: "Twitterアカウントがありません。",
+//            //                                                  message: "アカウントを作成してください。",
+//            //                                                  preferredStyle: .alert)
+//            //                    self.present(alert, animated: false, completion: nil)
+//            //                }
+////        } else {
+////            //                let alert = UIAlertController(title: "Twitterアカウントもしくはアプリがありません。",
+////            //                                              message: "アカウントを作成してください。",
+////            //                                            preferredStyle: .alert)
+////            //                self.present(alert, animated: false, completion: nil)
+////
+////            let alert: UIAlertController =
+////                UIAlertController(title: "デバイス内にTwitterアプリがありません",
+////                                  message: "処理を選んで下さい",
+////                                  preferredStyle: UIAlertController.Style.actionSheet)
+////
+////            let facebookActionsheet: UIAlertAction =
+////                UIAlertAction(title: "OK",
+////                              style: UIAlertAction.Style.default,
+////                              handler: {(_: UIAlertAction) in
+////                                //                                print("Facebook")
+////                })
+////
+////            //            let twitterActionsheet: UIAlertAction =
+////            //                UIAlertAction(title: "Twitter",
+////            //                              style: UIAlertAction.Style.default,
+////            //                              handler: {(_: UIAlertAction) in
+////            //                                print("Twitter")
+////            //                })
+////            //
+////            let lineActionsheet: UIAlertAction =
+////                UIAlertAction(title: "NG",
+////                              style: UIAlertAction.Style.default,
+////                              handler: {(_: UIAlertAction) in
+////                                print("LINE")
+////                })
+////
+////            alert.addAction(facebookActionsheet)
+////            //            alert.addAction(twitterActionsheet)
+////            alert.addAction(lineActionsheet)
+////
+////            self.present(alert, animated: true, completion: nil)
+//
+//        }
+//        return
+    }
+    
+    
+    //https://qiita.com/kingconyd/items/549e53d35fc28dc88794
+    func sndTweet() {
         if TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers() {
             
             // キャプチャしたい枠を決める
@@ -77,54 +179,10 @@ class AlbumTableViewController: UITableViewController,TWTRComposerViewController
             
             //            let overView = Overview.init(initialText: "メガネを探す女性です。", image: shareImg2, videoURL: nil)
             
-            let composer = TWTRComposerViewController(initialText: "#unlock", image: shareImg2, videoURL: nil)
+            let composer = TWTRComposerViewController(initialText: "#HeartUnlock", image: shareImg2, videoURL: nil)
             
             composer.delegate = self
             present(composer, animated: true, completion: nil)
-            
-            //        } else {
-            //                    let alert = UIAlertController(title: "Twitterアカウントがありません。",
-            //                                                  message: "アカウントを作成してください。",
-            //                                                  preferredStyle: .alert)
-            //                    self.present(alert, animated: false, completion: nil)
-            //                }
-        } else {
-            //                let alert = UIAlertController(title: "Twitterアカウントもしくはアプリがありません。",
-            //                                              message: "アカウントを作成してください。",
-            //                                            preferredStyle: .alert)
-            //                self.present(alert, animated: false, completion: nil)
-            
-            let alert: UIAlertController =
-                UIAlertController(title: "デバイス内にTwitterアプリがありません",
-                                  message: "処理を選んで下さい",
-                                  preferredStyle: UIAlertController.Style.actionSheet)
-            
-            let facebookActionsheet: UIAlertAction =
-                UIAlertAction(title: "OK",
-                              style: UIAlertAction.Style.default,
-                              handler: {(_: UIAlertAction) in
-                                //                                print("Facebook")
-                })
-            
-            //            let twitterActionsheet: UIAlertAction =
-            //                UIAlertAction(title: "Twitter",
-            //                              style: UIAlertAction.Style.default,
-            //                              handler: {(_: UIAlertAction) in
-            //                                print("Twitter")
-            //                })
-            //
-            let lineActionsheet: UIAlertAction =
-                UIAlertAction(title: "NG",
-                              style: UIAlertAction.Style.default,
-                              handler: {(_: UIAlertAction) in
-                                print("LINE")
-                })
-            
-            alert.addAction(facebookActionsheet)
-            //            alert.addAction(twitterActionsheet)
-            alert.addAction(lineActionsheet)
-            
-            self.present(alert, animated: true, completion: nil)
             
         }
         return

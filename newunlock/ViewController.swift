@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate{
     
@@ -41,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
 //        view.backgroundColor = UIColor(red: 0/255, green: 162/255, blue: 154/255, alpha: 1)
 //
 //        scrollView.delegate = self

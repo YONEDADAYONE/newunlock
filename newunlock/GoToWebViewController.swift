@@ -17,7 +17,7 @@ class GoToWebViewController: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         
         webView.uiDelegate = self
-        if let url: URL = URL(string: "https://twitter.com/search?q=%23heart%27s%20unlock&src=typd") {
+        if let url: URL = URL(string: "https://twitter.com/search?q=%23Heartunlock&src=typd") {
             
             //https://dev.classmethod.jp/smartphone/launching-app-store-from-ios-app/
             // URLを開けるかをチェックする

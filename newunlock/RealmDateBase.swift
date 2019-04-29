@@ -18,7 +18,8 @@ class StorageBox: Object {
     @objc dynamic var Contents3 = ""
     @objc dynamic var Contents4 = ""
     @objc dynamic var achievementFlg = true
-    @objc dynamic var  registrationDate = Date()
+    @objc dynamic var deleteFlg = true
+    @objc dynamic var registrationDate = Date()
     
     //    // idをプライマリキーに設定
     override static func primaryKey() -> String? {

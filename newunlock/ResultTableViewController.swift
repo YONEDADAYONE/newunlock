@@ -59,34 +59,34 @@ class ResultTableViewController: UITableViewController {
     @IBAction func goToResRegistraion(_ sender: UIBarButtonItem) {
 
         
-        //プライマリーキーIDに1ずつ足す方法
-        //https://qiita.com/kotala_b/items/68b9608df6c8bac80f67
-        var maxId: Int? { return try? Realm().objects(StorageBox.self).sorted(byKeyPath: "id").last?.id ?? 0 }
-        storageBox.setValue(storageBox.id + 1, forKey: "id")
-        storageBox.id = maxId! + 1
-        storageBox.setValue(storage, forKey: "title")
-        storageBox.setValue(storage2, forKey: "Contents1")
-        storageBox.setValue(storage3, forKey: "Contents2")
-        storageBox.setValue(storage4, forKey: "Contents3")
-        storageBox.setValue(storage5, forKey: "Contents4")
-        
-        print("知りたいのは\(storageBox)")
-        
-        do {
-            //writeではテキストを指定したファイルに書き込むことができる。
-            //ここではrealmに書き込んでいる。
-            try realm?.write {
-                //の変数にデータを書き込んでいる。
-                realm?.add(storageBox)
-            }
-        } catch {
-            print(error)
-        }
+//        //プライマリーキーIDに1ずつ足す方法
+//        //https://qiita.com/kotala_b/items/68b9608df6c8bac80f67
+//        var maxId: Int? { return try? Realm().objects(StorageBox.self).sorted(byKeyPath: "id").last?.id ?? 0 }
+//        storageBox.setValue(storageBox.id + 1, forKey: "id")
+//        storageBox.id = maxId! + 1
+//        storageBox.setValue(storage, forKey: "title")
+//        storageBox.setValue(storage2, forKey: "Contents1")
+//        storageBox.setValue(storage3, forKey: "Contents2")
+//        storageBox.setValue(storage4, forKey: "Contents3")
+//        storageBox.setValue(storage5, forKey: "Contents4")
+//
+//        print("知りたいのは\(storageBox)")
+//
+//        do {
+//            //writeではテキストを指定したファイルに書き込むことができる。
+//            //ここではrealmに書き込んでいる。
+//            try realm?.write {
+//                //の変数にデータを書き込んでいる。
+//                realm?.add(storageBox)
+//            }
+//        } catch {
+//            print(error)
+//        }
         
         // ① UIAlertControllerクラスのインスタンスを生成
         // タイトル, メッセージ, Alertのスタイルを指定する
         // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
-        let alert: UIAlertController = UIAlertController(title: "アラート表示", message: "保存してもいいですか？", preferredStyle:  UIAlertController.Style.alert)
+        let alert: UIAlertController = UIAlertController(title: "保存してもよろしいですか？", message: nil, preferredStyle:  UIAlertController.Style.alert)
         
         // ② Actionの設定
         // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
@@ -97,35 +97,60 @@ class ResultTableViewController: UITableViewController {
             (action: UIAlertAction!) -> Void in
             print("OK")
             
-            let actionSheet = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: UIAlertController.Style.actionSheet)
+            //プライマリーキーIDに1ずつ足す方法
+            //https://qiita.com/kotala_b/items/68b9608df6c8bac80f67
+            var maxId: Int? { return try? Realm().objects(StorageBox.self).sorted(byKeyPath: "id").last?.id ?? 0 }
+            self.storageBox.setValue(self.storageBox.id + 1, forKey: "id")
+            self.storageBox.id = maxId! + 1
+            self.storageBox.setValue(self.storage, forKey: "title")
+            self.storageBox.setValue(self.storage2, forKey: "Contents1")
+            self.storageBox.setValue(self.storage3, forKey: "Contents2")
+            self.storageBox.setValue(self.storage4, forKey: "Contents3")
+            self.storageBox.setValue(self.storage5, forKey: "Contents4")
             
-            let action1 = UIAlertAction(title: "アクション１", style: UIAlertAction.Style.default, handler: {
-                (action: UIAlertAction!) in
-//                //storyboard上に配置したVCへ遷移Swift
-                self.prepare()
-            })
+            print("知りたいのは\(self.storageBox)")
             
-            let action2 = UIAlertAction(title: "アクション２", style: UIAlertAction.Style.default, handler: {
-                (action: UIAlertAction!) in
-                print("アクション２をタップした時の処理")
-            })
+            do {
+                //writeではテキストを指定したファイルに書き込むことができる。
+                //ここではrealmに書き込んでいる。
+                try self.realm?.write {
+                    //の変数にデータを書き込んでいる。
+                    self.realm?.add(self.storageBox)
+                }
+            } catch {
+                print(error)
+            }
             
-            let action3 = UIAlertAction(title: "アクション３", style: UIAlertAction.Style.destructive, handler: {
-                (action: UIAlertAction!) in
-                print("アクション３をタップした時の処理")
-            })
+            self.prepare()
+//            let actionSheet = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: UIAlertController.Style.actionSheet)
+//
+//            let action1 = UIAlertAction(title: "アクション１", style: UIAlertAction.Style.default, handler: {
+//                (action: UIAlertAction!) in
+////                //storyboard上に配置したVCへ遷移Swift
+//                self.prepare()
+//            })
             
-            let cancel = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: {
-                (action: UIAlertAction!) in
-                print("キャンセルをタップした時の処理")
-            })
+//            let action2 = UIAlertAction(title: "アクション２", style: UIAlertAction.Style.default, handler: {
+//                (action: UIAlertAction!) in
+//                print("アクション２をタップした時の処理")
+//            })
+//
+//            let action3 = UIAlertAction(title: "アクション３", style: UIAlertAction.Style.destructive, handler: {
+//                (action: UIAlertAction!) in
+//                print("アクション３をタップした時の処理")
+//            })
             
-            actionSheet.addAction(action1)
-            actionSheet.addAction(action2)
-            actionSheet.addAction(action3)
-            actionSheet.addAction(cancel)
+//            let cancel = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: {
+//                (action: UIAlertAction!) in
+//                print("キャンセルをタップした時の処理")
+//            })
             
-            self.present(actionSheet, animated: true, completion: nil)
+//            actionSheet.addAction(action1)
+//            actionSheet.addAction(action2)
+//            actionSheet.addAction(action3)
+//            actionSheet.addAction(cancel)
+//
+//            self.present(actionSheet, animated: true, completion: nil)
             
             
         })

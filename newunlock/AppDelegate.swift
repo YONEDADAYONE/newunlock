@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if true {
                 let content1 = OnboardingContentViewController(
                     title: "welcome to「Heart's Unlock」",
-                    body: "このアプリでは「やめたいこと」や「できないこと」から「新しい自分」を発見することができるアプリです。",
+                    body: "このアプリでは「やめたいこと」から「新しい自分」を発見することができるアプリです。",
                     image: UIImage(named: "南京錠1"),
                     buttonText: "NEXT",
                     action: nil
